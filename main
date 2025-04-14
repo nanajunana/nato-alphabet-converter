@@ -8,13 +8,14 @@ user_input = input("What is your word?").upper()
 
 user_input_list = [letter for letter in user_input]
 
-coded = {letter:alphabet_list[letter] for letter in user_input_list}
+coded = [alphabet_list[letter] for letter in user_input_list]
 
 # for char in user_input.upper():
 #     if char in alphabet_list:
 #         coded.append(alphabet_list[char])
-should_combine = [code for (letter, code) in coded.items()]
-combined = ' '.join(should_combine)
+
+combined = ' '.join(coded)
 
 print(f'Your coded word is {combined}')
+print(f'Your list is {coded}')
 
